@@ -1,0 +1,15 @@
+# Artefatos de build e simulacao
+*.vvp
+*.vcd
+*.fst
+*.out
+obj_dir/
+build/
+
+# Relatorios/saidas transitorias de ferramentas
+*.log
+*.tmp
+
+# Lixo de editor/SO
+.DS_Store
+*.swp
