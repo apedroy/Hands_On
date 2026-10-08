@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1791501610.854956483, "rt":0.65, "ut":0.30, "st":0.17}}
+{"vcselab":{"timestamp_begin":1791501611.680594825, "rt":0.34, "ut":0.23, "st":0.04}}
+{"link":{"timestamp_begin":1791501612.144433768, "rt":0.43, "ut":0.28, "st":0.17}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1791501610.053612081}
+{"VCS_COMP_START_TIME": 1791501610.053612081}
+{"VCS_COMP_END_TIME": 1791501612.724690303}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -timescale=1ns/1ps -lca +lint=all -l /tmp/tmp.c1FpdQZ2ij/compile.log -o /tmp/tmp.c1FpdQZ2ij/simv /home/alexandre.cariri/ci_expert/hands_on/rtl/week1_smoke.v /home/alexandre.cariri/ci_expert/hands_on/tb/tb_week1.sv"}
+{"vcs1": {"peak_mem": 409888}}
+{"vcselab": {"peak_mem": 251224}}

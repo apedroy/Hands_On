@@ -15,8 +15,7 @@ module tb_week1;
     initial begin
         for (vector = 0; vector < 4; vector = vector + 1) begin
             {a, b} = vector[1:0];
-            #1;
-            if (y !== (a ^ b)) begin
+            #1 if (y !== (a ^ b)) begin
                 $display("FAIL: a=%b b=%b y=%b", a, b, y);
                 $fatal(1);
             end

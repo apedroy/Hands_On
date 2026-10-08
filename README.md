@@ -20,10 +20,10 @@ Cada entrega semanal deve ser identificada por uma tag ou branch e acompanhada d
 
 ## Semana 1: fluxo mínimo
 
-O exemplo mínimo fica em `rtl/week1_smoke.v` e `tb/tb_week1.sv`. Para executá-lo, tenha Icarus Verilog (`iverilog` e `vvp`) e Verilator (`verilator`) instalados e execute na raiz do repositório:
+O exemplo mínimo fica em `rtl/week1_smoke.v` e `tb/tb_week1.sv`. O fluxo usa o VCS da Synopsys (toolchain do curso). Basta executar na raiz do repositório:
 
 ```sh
 ./scripts/check_week1.sh
 ```
 
-O script compila e simula o testbench e executa o lint do RTL. Consulte `docs/backlog.md` para as tarefas iniciais e `docs/reports/semana_01.md` para o registro da entrega.
+O script carrega o ambiente Synopsys (`source /Tools/synopsys-scripts/snps.sh`) automaticamente caso o VCS ainda não esteja no `PATH`, compila e simula o testbench com lint habilitado (`+lint=all`) e confirma os vetores do smoke-test. Consulte `docs/backlog.md` para as tarefas iniciais e `docs/reports/semana_01.md` para o registro da entrega.

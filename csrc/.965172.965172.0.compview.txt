@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1791501539.579639425, "rt":0.71, "ut":0.31, "st":0.16}}
+{"vcselab":{"timestamp_begin":1791501540.468086728, "rt":0.34, "ut":0.23, "st":0.04}}
+{"link":{"timestamp_begin":1791501540.935437308, "rt":0.45, "ut":0.28, "st":0.19}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1791501538.771819085}
+{"VCS_COMP_START_TIME": 1791501538.771819085}
+{"VCS_COMP_END_TIME": 1791501541.542342146}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -timescale=1ns/1ps -lca +lint=TFIPC-L -l /tmp/tmp.cAO9kP5SRz/comp.log -o /tmp/tmp.cAO9kP5SRz/simv rtl/week1_smoke.v tb/tb_week1.sv"}
+{"vcs1": {"peak_mem": 409668}}
+{"vcselab": {"peak_mem": 251212}}

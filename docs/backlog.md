@@ -4,7 +4,7 @@ Status inicial em 2026-10-01. Itens dependentes de material ou acesso do instrut
 
 | Semana | Tarefas | Status |
 | --- | --- | --- |
-| 01 | Estudar AES e SPI; preparar ambiente; validar exemplo minimo; registrar backlog e estudo | Parcial: estudo, exemplo, testbench e fluxo registrados; aceite bloqueado pela ausencia de Icarus Verilog e Verilator |
+| 01 | Estudar AES e SPI; preparar ambiente; validar exemplo minimo; registrar backlog e estudo | Concluido: estudo, exemplo, testbench e fluxo minimo (compilacao, lint e simulacao com VCS) executados e aprovados |
 | 02 | Receber especificacao; definir arquitetura, clocks, resets, interfaces e mapa de registradores | Aguardando especificacao funcional |
 | 03 | Implementar transformacoes de rodada AES e testes unitarios | Pendente |
 | 04 | Implementar expansao de chave, controle e vetores FIPS-197 | Pendente |
@@ -23,7 +23,6 @@ Status inicial em 2026-10-01. Itens dependentes de material ou acesso do instrut
 ## Pendencias imediatas
 
 - [ ] Solicitar ao instrutor a especificacao funcional e os criterios detalhados de cada interface.
-- [ ] Solicitar acesso ao simulador/linter aprovados para o curso ou instalar Icarus Verilog (`iverilog`, `vvp`) e Verilator (`verilator`).
-- [ ] Solicitar o PDK e as ferramentas/licencas necessarios para sintese, formal, CDC e UPF.
-- [ ] Reexecutar `./scripts/check_week1.sh` em ambiente com as ferramentas HDL instaladas; registrar compilacao, simulacao e lint aprovados no relatorio da Semana 1.
+- [ ] Solicitar o PDK e as bibliotecas necessarios para sintese, formal, CDC e UPF.
+- [x] Executar `./scripts/check_week1.sh` com o ambiente Synopsys (VCS); compilacao, simulacao e lint aprovados e registrados no relatorio da Semana 1.
 - [ ] Abrir issue para cada defeito encontrado pelo verificador parceiro nas entregas futuras.
