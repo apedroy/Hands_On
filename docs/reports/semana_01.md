@@ -6,6 +6,9 @@
 
 ## Estudo
 
+O estudo detalhado de AES (FIPS-197) e SPI esta no relatorio dedicado
+[`estudo_aes_spi.md`](estudo_aes_spi.md). Resumo dos pontos principais:
+
 - O AES e uma cifra simetrica de blocos definida pelo NIST. O tamanho do bloco e 128 bits; as chaves podem ter 128, 192 ou 256 bits, com 10, 12 ou 14 rodadas, respectivamente.
 - Na cifragem, as operacoes fundamentais incluem SubBytes, ShiftRows, MixColumns e AddRoundKey. A rodada final omite MixColumns. A expansao da chave gera as chaves de rodada.
 - SPI e uma interface serial sincrona tipicamente composta por SCLK, CS_N, MOSI e MISO. CPOL define a polaridade de repouso do clock e CPHA define a fase de amostragem; suas combinacoes formam os modos 0 a 3. A especificacao funcional do projeto ainda deve determinar o modo e o enquadramento adotados.
