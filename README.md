@@ -27,3 +27,40 @@ O exemplo mínimo fica em `rtl/week1_smoke.v` e `tb/tb_week1.sv`. O fluxo usa o 
 ```
 
 O script carrega o ambiente Synopsys (`source /Tools/synopsys-scripts/snps.sh`) automaticamente caso o VCS ainda não esteja no `PATH`, compila e simula o testbench com lint habilitado (`+lint=all`) e confirma os vetores do smoke-test. Consulte `docs/backlog.md` para as tarefas iniciais e `docs/reports/semana_01.md` para o registro da entrega.
+
+## Semana 2: transformações AES
+
+`rtl/minisoc_aes/minisoc_aes_sbox.sv`,
+`rtl/minisoc_aes/minisoc_aes_sub_bytes.sv` e
+`rtl/minisoc_aes/minisoc_aes_shift_rows.sv` implementam as transformações combinacionais
+definidas no roteiro. Execute `./scripts/check_week2.sh` para compilar com lint
+e conferir as 256 entradas da S-box e os estados das rodadas 1 e 10 do
+Apêndice B da FIPS-197. O resultado e as pendências sobre o Block Guide estão
+em `docs/reports/semana_02.md`.
+
+## Semana 3: transformações de rodada e microarquitetura
+
+As transformações diretas e inversas AES ficam em `rtl/minisoc_aes/`.
+Execute `./scripts/check_week3.sh` para compilar com lint e simular os vetores
+intermediários de cifragem/decifragem. A proposta iterativa de microarquitetura
+e as decisões para revisão estão em `docs/architecture/microarquitetura_v1.md`;
+os resultados estão em `docs/reports/semana_03.md`.
+
+## Semana 4: expansao de chave e datapath AES-128
+
+`rtl/minisoc_aes/minisoc_aes_key_exp.sv` pre-calcula as 11 chaves de rodada,
+e `rtl/minisoc_aes/minisoc_aes_dp.sv` cifra ou decifra um bloco de 128 bits.
+O datapath aceita `start` quando `busy=0`, captura as entradas e sinaliza o
+resultado com um pulso de `done`. Ainda nao inclui SPI, memoria ou modos de
+encadeamento.
+
+```sh
+source /Tools/synopsys-scripts/snps.sh
+./scripts/check_week4.sh
+```
+
+O teste verifica todas as chaves do Apendice A.1, os vetores dos Apendices B
+e C.1 da FIPS-197 nos dois sentidos e o controle de operacao/reset. A compilacao
+da Semana 4 fica isolada em diretorio temporario, inclusive os intermediarios
+do VCS. Consulte `docs/reports/semana_04.md` e a secao da Semana 4 em
+`docs/architecture/microarquitetura_v1.md` para interfaces, latencia e escolhas.

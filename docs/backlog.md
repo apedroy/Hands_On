@@ -5,9 +5,9 @@ Status inicial em 2026-10-01. Itens dependentes de material ou acesso do instrut
 | Semana | Tarefas | Status |
 | --- | --- | --- |
 | 01 | Estudar AES e SPI; preparar ambiente; validar exemplo minimo; registrar backlog e estudo | Concluido: estudo, exemplo, testbench e fluxo minimo (compilacao, lint e simulacao com VCS) executados e aprovados |
-| 02 | Receber especificacao; definir arquitetura, clocks, resets, interfaces e mapa de registradores | Aguardando especificacao funcional |
-| 03 | Implementar transformacoes de rodada AES e testes unitarios | Pendente |
-| 04 | Implementar expansao de chave, controle e vetores FIPS-197 | Pendente |
+| 02 | Implementar S-box, SubBytes e ShiftRows; validar tabela completa e vetores FIPS-197 | Concluido: lint e simulacao com VCS aprovados; Block Guide revisado no relatório |
+| 03 | Implementar transformacoes de rodada AES e testes unitarios | RTL e testes aprovados com VCS; microarquitetura v1.0 proposta aguardando revisão do instrutor/verificador parceiro |
+| 04 | Implementar expansao de chave e datapath AES-128; validar cifragem e decifragem FIPS-197 | Implementados e aprovados com VCS: 11 round keys, vetores nos dois sentidos, controle e reset; ver relatorio da Semana 4 |
 | 05 | Implementar SPI, sincronizacao e banco de registradores | Pendente |
 | 06 | Integrar top-level, executar teste ponta a ponta e analise CDC; congelar RTL v1.0 | Pendente |
 | 07 | Preparar SDC, sintetizar baseline e analisar area, timing e potencia | Aguardando PDK e ferramentas do instrutor |
